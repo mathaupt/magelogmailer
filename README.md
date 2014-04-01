@@ -3,6 +3,10 @@ magelogmailer
 
 log mailer for Magento to get the information out of the log files
 
+The module is not meant to replace existing Magento functionality for error handling via email or reports, it is
+ meant to have an error monitoring without having to implement a hardware monitoring. Especially in environments
+ where you do not have access to implement such functionality.
+
 # Requirements
 
 - send log as attachment
