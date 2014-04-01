@@ -42,8 +42,9 @@ app/etc/local.xml.additional
 app/etc/local.xml.template
 app/etc/local.xml
 app/.htaccess
-app/locale/
+.htaccess
 app/Mage.php
+build.xml
 cron.php
 cron.sh
 downloader/

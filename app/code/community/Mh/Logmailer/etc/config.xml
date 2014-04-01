@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Matthias Haupt
+    http://www.matthias-haupt.net
+-->
+<config>
+    <modules>
+        <Mh_Logmailer>
+            <version>1.8.1.0.0</version>
+        </Mh_Logmailer>
+    </modules>
+    <global>
+        <models>
+            <logmailer>
+                <class>Mh_Logmailer_Model</class>
+                <resourceModel>logmailer_mysql4</resourceModel>
+            </logmailer>
+            <logmailer_mysql4>
+                <class>Mh_Logmailer_Model_Mysql4</class>
+            </logmailer_mysql4>
+        </models>
+        <blocks>
+            <logmailer>
+                <class>Mh_Logmailer_Block</class>
+            </logmailer>
+        </blocks>
+
+        <helpers>
+            <logmailer>
+                <class>Mh_Logmailer_Helper</class>
+            </logmailer>
+        </helpers>
+
+        <resources>
+            <logmailer_setup>
+                <setup>
+                    <module>Mh_Logmailer</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </logmailer_setup>
+            <logmailer_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </logmailer_write>
+            <logmailer_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </logmailer_read>
+        </resources>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Mh_Logmailer before="Mage_Adminhtml">Mh_Logmailer_Adminhtml</Mh_Logmailer>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Mh_Logmailer>
+                    <files>
+                        <default>Mh_Logmailer.csv</default>
+                    </files>
+                </Mh_Logmailer>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend>
+        <translate>
+            <modules>
+                <Mh_Logmailer>
+                    <files>
+                        <default>Mh_Logmailer.csv</default>
+                    </files>
+                </Mh_Logmailer>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <logmailer module="Mh_Logmailer">
+                    <file>logmailer.xml</file>
+                </logmailer>
+            </updates>
+        </layout>
+        <routers>
+            <logmailer>
+                <use>standard</use>
+                <args>
+                    <module>Mh_Logmailer</module>
+                    <frontName>logmailer</frontName>
+                </args>
+            </logmailer>
+        </routers>
+    </frontend>
+</config>
