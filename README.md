@@ -22,10 +22,10 @@ The module is not meant to replace existing Magento functionality for error hand
 # Status
 
 - initial project setup
+- implement configurations
 
 # Next steps
 
-- implement configurations
 - implement helper functions to read configuration
 - implement core logic for sending mails
 - implement core logic for reading logs

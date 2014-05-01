@@ -101,4 +101,17 @@
             </logmailer>
         </routers>
     </frontend>
+    <default>
+        <logmailer>
+            <general>
+                <active>0</active>
+                <recipient_identity>general</recipient_identity>
+                <sender_identity>general</sender_identity>
+            </general>
+            <log_settings>
+                <max_megabyte>10</max_megabyte>
+                <send_attachment_type>0</send_attachment_type>
+            </log_settings>
+        </logmailer>
+    </default>
 </config>
